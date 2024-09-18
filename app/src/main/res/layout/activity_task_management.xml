@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Campo para o título da tarefa -->
+        <EditText
+            android:id="@+id/taskTitleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_title_hint"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Campo para a descrição da tarefa -->
+        <EditText
+            android:id="@+id/taskDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_description_hint"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo para a data de vencimento -->
+        <EditText
+            android:id="@+id/taskDueDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_due_date_hint"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <!-- Botão para salvar a tarefa -->
+        <Button
+            android:id="@+id/saveTaskButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_task"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

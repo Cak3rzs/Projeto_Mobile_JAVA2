@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Campo para o título do projeto -->
+        <EditText
+            android:id="@+id/projectTitleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/project_title_hint"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Campo para a descrição do projeto -->
+        <EditText
+            android:id="@+id/projectDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/project_description_hint"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botão para salvar o projeto -->
+        <Button
+            android:id="@+id/saveProjectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_project"
+            android:layout_marginTop="16dp" />
+
+        <!-- Título da seção de tarefas -->
+        <TextView
+            android:id="@+id/tasksTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tasks_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <!-- Botão para adicionar uma nova tarefa -->
+        <Button
+            android:id="@+id/addTaskButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_task"
+            android:layout_marginTop="8dp" />
+
+        <!-- Lista de tarefas -->
+        <ListView
+            android:id="@+id/taskListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
