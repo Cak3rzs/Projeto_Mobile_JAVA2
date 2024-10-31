@@ -43,6 +43,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>
