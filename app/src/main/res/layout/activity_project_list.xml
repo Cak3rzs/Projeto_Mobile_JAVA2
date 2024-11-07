@@ -33,4 +33,15 @@
         android:layout_below="@id/addProjectButton"
         android:layout_marginTop="16dp" />
 
+    <!-- Botão para excluir um projeto -->
+    <Button
+        android:id="@+id/deleteProjectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir Projeto"
+        android:layout_below="@id/projectListView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" /> <!-- Inicialmente invisível, será mostrado conforme necessário -->
+
 </RelativeLayout>

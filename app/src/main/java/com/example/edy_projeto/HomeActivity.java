@@ -34,12 +34,13 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
+
                 if (validateLogin(username, password)) {
                     Toast.makeText(HomeActivity.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
-                    // Aqui você pode iniciar a próxima atividade (por exemplo, HomeActivity)
-                    Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
+                    // Redirecionar para uma nova Activity após o login bem-sucedido
+                    Intent intent = new Intent(HomeActivity.this, ProjectListActivity.class); // Use sua Activity de destino
                     startActivity(intent);
-                    finish(); // Opcional: fecha a LoginActivity
+                    finish(); // Fecha a tela de login
                 } else {
                     Toast.makeText(HomeActivity.this, "Nome de usuário ou senha incorretos!", Toast.LENGTH_SHORT).show();
                 }
@@ -50,13 +51,16 @@ public class HomeActivity extends AppCompatActivity {
     // Método para validar o login
     private boolean validateLogin(String username, String password) {
         Cursor cursor = databaseHelper.getAllUsers();
+        boolean isValid = false;
         while (cursor.moveToNext()) {
             String dbUsername = cursor.getString(cursor.getColumnIndex("USERNAME"));
             String dbPassword = cursor.getString(cursor.getColumnIndex("PASSWORD"));
             if (dbUsername.equals(username) && dbPassword.equals(password)) {
-                return true; // Login bem-sucedido
+                isValid = true;
+                break;
             }
         }
-        return false; // Login falhou
+        cursor.close(); // Fechar o cursor após o uso
+        return isValid;
     }
 }
