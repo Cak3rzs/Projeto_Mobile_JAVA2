@@ -23,8 +23,9 @@
             android:id="@+id/projectDescriptionEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:hint="@string/project_description_hint"
-            android:layout_marginTop="8dp" />
+            android:minHeight="48dp" />
 
         <!-- Botão para salvar o projeto -->
         <Button
@@ -52,12 +53,26 @@
             android:text="@string/add_task"
             android:layout_marginTop="8dp" />
 
+        <!-- Botão para excluir uma tarefa selecionada -->
+        <Button
+            android:id="@+id/deleteTaskButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Excluir Tarefa"
+            android:layout_below="@id/taskListView"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentEnd="true" />
+             <!-- Inicialmente invisível -->
+
+
         <!-- Lista de tarefas -->
         <ListView
             android:id="@+id/taskListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp" />
+
+
 
     </LinearLayout>
 </ScrollView>
